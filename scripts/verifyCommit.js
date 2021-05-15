@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // Invoked on the commit-msg git hook by yorkie.
 
 const chalk = require("chalk");
