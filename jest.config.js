@@ -1,7 +1,13 @@
 module.exports = {
   transform: {
-    "^.+\\.jsx?$": "babel-jest",
+    //  用 `vue-jest` 处理 `*.vue` 文件
     "^.+\\.vue$": "vue-jest",
+    "^.+\\.jsx?$": "babel-jest", // Adding this line solved the issue
     "^.+\\.tsx?$": "ts-jest",
   },
+  // support alias
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+  },
+  testMatch: ["**/tests/unit/**/*.[jt]s?(x)"],
 };
